@@ -15,6 +15,9 @@
 		4318712328B345E800D4C677 /* Movie+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4318712128B345E800D4C677 /* Movie+CoreDataClass.swift */; };
 		4318712428B345E800D4C677 /* Movie+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4318712228B345E800D4C677 /* Movie+CoreDataProperties.swift */; };
 		4318712628B34EF200D4C677 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4318712528B34EF200D4C677 /* DataController.swift */; };
+		4318712928B35CEC00D4C677 /* Singer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4318712728B35CEC00D4C677 /* Singer+CoreDataClass.swift */; };
+		4318712A28B35CEC00D4C677 /* Singer+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4318712828B35CEC00D4C677 /* Singer+CoreDataProperties.swift */; };
+		4318712C28B35F2900D4C677 /* FilteredList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4318712B28B35F2900D4C677 /* FilteredList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +30,9 @@
 		4318712128B345E800D4C677 /* Movie+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Movie+CoreDataClass.swift"; sourceTree = "<group>"; };
 		4318712228B345E800D4C677 /* Movie+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Movie+CoreDataProperties.swift"; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
 		4318712528B34EF200D4C677 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		4318712728B35CEC00D4C677 /* Singer+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Singer+CoreDataClass.swift"; path = "CDataTut/Singer+CoreDataClass.swift"; sourceTree = "<group>"; };
+		4318712828B35CEC00D4C677 /* Singer+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Singer+CoreDataProperties.swift"; path = "CDataTut/Singer+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		4318712B28B35F2900D4C677 /* FilteredList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +49,8 @@
 		4318710428B33E4200D4C677 = {
 			isa = PBXGroup;
 			children = (
+				4318712728B35CEC00D4C677 /* Singer+CoreDataClass.swift */,
+				4318712828B35CEC00D4C677 /* Singer+CoreDataProperties.swift */,
 				4318710F28B33E4200D4C677 /* CDataTut */,
 				4318710E28B33E4200D4C677 /* Products */,
 			);
@@ -64,6 +72,7 @@
 				4318711028B33E4200D4C677 /* CDataTutApp.swift */,
 				4318712528B34EF200D4C677 /* DataController.swift */,
 				4318711228B33E4200D4C677 /* ContentView.swift */,
+				4318712B28B35F2900D4C677 /* FilteredList.swift */,
 				4318711E28B344F600D4C677 /* CoreDataProject.xcdatamodeld */,
 				4318711428B33E4500D4C677 /* Assets.xcassets */,
 				4318711628B33E4500D4C677 /* Preview Content */,
@@ -149,10 +158,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4318712928B35CEC00D4C677 /* Singer+CoreDataClass.swift in Sources */,
 				4318712328B345E800D4C677 /* Movie+CoreDataClass.swift in Sources */,
+				4318712C28B35F2900D4C677 /* FilteredList.swift in Sources */,
 				4318712628B34EF200D4C677 /* DataController.swift in Sources */,
 				4318712428B345E800D4C677 /* Movie+CoreDataProperties.swift in Sources */,
 				4318711328B33E4200D4C677 /* ContentView.swift in Sources */,
+				4318712A28B35CEC00D4C677 /* Singer+CoreDataProperties.swift in Sources */,
 				4318711128B33E4200D4C677 /* CDataTutApp.swift in Sources */,
 				4318712028B344F600D4C677 /* CoreDataProject.xcdatamodeld in Sources */,
 			);
