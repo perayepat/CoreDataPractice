@@ -10,12 +10,65 @@ import SwiftUI
 
 struct ContentView: View {
     @Environment(\.managedObjectContext) var moc
-    @State private var lastNameFilter = "A"
+    @FetchRequest(sortDescriptors: []) var countries: FetchedResults<Country>
     
     var body: some View {
+        //two for each one for a section for the country and another for the list in each country
+        VStack{
+            List {
+                ForEach(countries, id: \.self) { country in
+                    Section(header: Text(country.wrappedFullName)) {
+                        ForEach(country.candyArray, id: \.self) { candy in
+                            Text(candy.wrappedName)
+                        }
+                    }
+                }
+            }
+            Button("Add Examples"){
+                let candy1 = Candy(context: moc)
+                candy1.name = "Mars"
+                candy1.origin = Country(context: moc)
+                candy1.origin?.shortName = "UK"
+                candy1.origin?.fullName = "United Kingdom"
+                
+                let candy2 = Candy(context: moc)
+                candy2.name = "KitKat"
+                candy2.origin = Country(context: moc)
+                candy2.origin?.shortName = "UK"
+                candy2.origin?.fullName = "United Kingdom"
+                
+                let candy3 = Candy(context: moc)
+                candy3.name = "TWix"
+                candy3.origin = Country(context: moc)
+                candy3.origin?.shortName = "UK"
+                candy3.origin?.fullName = "United Kingdom"
+                
+                let candy4 = Candy(context: moc)
+                candy4.name = "Toblerone"
+                candy4.origin = Country(context: moc)
+                candy4.origin?.shortName = "CH"
+                candy4.origin?.fullName = "Switzerland"
+                
+                try? moc.save()
+            }
+        }
+    }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
+
+//MARK: - Dynamic Filter View
+struct DynamicView: View{
+    @Environment(\.managedObjectContext) var moc
+    @State private var lastNameFilter = "A"
+    var body: some View{
         VStack{
             //List of matching Singers
-            //specifying the singer here makes it so the generic dynamic list knows that were looking for a singer 
+            //specifying the singer here makes it so the generic dynamic list knows that were looking for a singer
             FilteredList(filterKey: "lastName", filterValue: lastNameFilter, content: {(singer:Singer) in
                 Text("\(singer.wrappedFirstName) \(singer.wrappedLastName)")
             })
@@ -44,12 +97,6 @@ struct ContentView: View {
             }
             
         }
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
     }
 }
 
